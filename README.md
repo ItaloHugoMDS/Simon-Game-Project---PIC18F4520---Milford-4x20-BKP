@@ -11,4 +11,9 @@ https://www.microchip.com/en-us/tools-resources/archives/mplab-ecosystem#MCC2
 
 Scroll down to Peripheral Libraries, in the PIC18F section, find your your OS platform, and download the library.
 
-After you've download and installed the library, copy the folders "include" and "source" and paste it in your folder
+After you've download and installed the library, copy the folders "include" and "source" and paste it in a folder you putted the C code.
+
+In the MPLAB X platform, go to the "project properties" in the the section 
+"XC8 compiler" -> "Include directories" -> '...' (add both paths of the files you copied from the libraries and save those configurations)
+
+When you compile the code, it will generate an error in one of the files inside the library due to a "long" convertion, you can just delete this long conversion and compile the code again.
