@@ -9,7 +9,7 @@ The connection between PIc and LCD needs a library to be compiled. You can find 
 
 https://www.microchip.com/en-us/tools-resources/archives/mplab-ecosystem#MCC2
 
-Scroll down to Peripheral Libraries, in the PIC18F section, find your your OS platform, and download the library.
+Scroll down to Peripheral Libraries, in the PIC18F section, find your OS platform, and download the library.
 
 After you've download and installed the library, copy the folders "include" and "source" and paste it in a folder you putted the C code.
 
