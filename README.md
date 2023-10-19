@@ -1,6 +1,6 @@
-# Genius-Game-Project---PIC18F4520---Milford-4x20-BKP
+# Simon-Game-Project---PIC18F4520---Milford-4x20-BKP
 
-This is the C code to the Genius Game project. 
+This is the C code to the Simon Game project. 
 The software was compiled using the XC8 compiler in the MPLAB X (v.5.50) platform. 
 The hardware of this project was created and tested on the Proteus (v.8.13) platform. 
 It was used a PIC microcontroller (PIC18F4520) and a Milford-4x20-BKP.
