@@ -16,11 +16,11 @@
 #include <USART/uwrite.c>   //
 
 #define _XTAL_FREQ 4000000  // Frequency used for PIC18F4520;
-#define BAUD_RATE 9600      // Definying the BAUD frequency reate as 9600,
+#define BAUD_RATE 9600      // Defining the BAUD frequency rate as 9600,
                             // therefore 9600 bits of data transfer per second;
 
 #pragma config WDT  = OFF    // Turning off Watchdog;
-#pragma config MCLRE = OFF  // Turning off Masterclear;
+#pragma config MCLRE = OFF  // Turning off Master clear;
 
 #define Button_1x1  PORTCbits.RC3    //
 #define Button_1x2  PORTCbits.RC4       //
@@ -49,7 +49,7 @@
 #define Led_2x2 PORTBbits.RB0                  //
 #define Led_2x3 PORTBbits.RB1                     //
 #define Led_2x4 PORTBbits.RB2                        //
-                                                        //  Definying output
+                                                        //  Defining output
 #define Led_3x1 PORTAbits.RA1                        //     ports (LED output);
 #define Led_3x2 PORTAbits.RA2                     //        
 #define Led_3x3 PORTAbits.RA3                  //
@@ -59,14 +59,14 @@
 #define Led_4x3 PORTCbits.RC0      //
 #define Led_4x4 PORTAbits.RA0   // 
 
-#define flag_timer_0 INTCONbits.TMR0IF  // Definying Timer0 flags;
-#define flag_timer_1 PIR1bits.TMR1IF    // Definying Timer1 flags;
-#define flag_transmiter PIR1bits.TXIF   // Definying flags for data transmission;
+#define flag_timer_0 INTCONbits.TMR0IF  // Defining Timer0 flags;
+#define flag_timer_1 PIR1bits.TMR1IF    // Defining Timer1 flags;
+#define flag_transmiter PIR1bits.TXIF   // Defining flags for data transmission;
 
-#define Level_Max 128   // Definying the initialization size of the array that
+#define Level_Max 128   // Defining the initialization size of the array that
                         // will be used to store the sequences;
 
-//*******************************[Global Escope]********************************
+//*******************************[Global Scope]********************************
 
 int sequence_array [Level_Max];    // Array which will store the sequence;
 int active_button_array [Level_Max];    // Array which will store the user's
@@ -92,7 +92,7 @@ int multi = 450;    // Multiplier for the operation of counting the remaining
                     // time for user's input. This variable is necessary for
                     // making the games' counting mechanic closer to real time.
 
-//*******************************[Global Escope]********************************
+//*******************************[Global Scope]********************************
 
 int LCD_Initialize(void)    // LCD booting up;
 {
@@ -444,7 +444,7 @@ void button_act (void)  // Reading user's input DURING the game and storing
 }
 
 int checking_sequence(void)     // Comparing the sequences. Comparing the CORRECT
-                                // sequence with the sequence INPUTED by the user;
+                                // sequence with the sequence INPUTTED by the user;
 {
     int size_aba = size_sa;
     int total_size = (size_aba + size_sa)/2;
@@ -518,32 +518,32 @@ void main(void)
                             //              for the keypad;
  
     TMR0 = 0;   // Initializing Timer0 as 0;
-    flag_timer_0 = 0;    // Seeting Timer0's flag as 0;
+    flag_timer_0 = 0;    // Setting Timer0's flag as 0;
     int button;
     
     __delay_ms(1000);
         
     LCD_Initialize();    // Booting up LCD;
     
-    while(1)    // Begining of the infinity loop;
+    while(1)    // Beginning of the infinity loop;
     {
         adding_to_array(random_sequence());     // Generating random numbers and
                                                 // adding them to the sequence
                                                 // array;
                 
-        putsUSART("Level:");    // Seding information to the LCD through serial
+        putsUSART("Level:");    // Sending information to the LCD through serial
                                 // communication;
         
         level_cd = itoa(level, size_sa, 10);    // Converting the pseudo value
                                                 // of the array size into string;
         
-        putsUSART(level_cd);    // Seding information to the LCD through serial
+        putsUSART(level_cd);    // Sending information to the LCD through serial
                                 // communication;
         
-        LCD_Third_Line();   // Setting the cursos in the first column of the
+        LCD_Third_Line();   // Setting the cursor in the first column of the
                             // third row on the LCD;
         
-        putsUSART("     SEQUENCE...");  // Seding information to the LCD through
+        putsUSART("     SEQUENCE...");  // Sending information to the LCD through
                                         // serial communication;
         
         __delay_ms(1000);
@@ -551,10 +551,10 @@ void main(void)
         display_current_sequence();    // Displaying the random sequence by
                                        // light up the LEDs;
         
-        LCD_Third_Line();   // Setting the cursos in the first column of the
+        LCD_Third_Line();   // Setting the cursor in the first column of the
                             // third row on the LCD;
         
-        putsUSART("     READY???                   ");   // Seding information to
+        putsUSART("     READY???                   ");   // Sending information to
                                                         // the LCD through
                                                         // serial communication;
         
@@ -565,10 +565,10 @@ void main(void)
         
         for(button = 0; button <= 15; button++){led_act_desact(button, 0);}
             // Turning off LEDs;
-        LCD_Third_Line();   // Setting the cursos in the first column of the
+        LCD_Third_Line();   // Setting the cursor in the first column of the
                             // third row on the LCD;
         
-        putsUSART("     GO                ");   // Seding information to the LCD
+        putsUSART("     GO                ");   // Sending information to the LCD
                                                 // through serial communication;
         
         if((size_sa % 2) == 0)  // Checking if the current level is a even
@@ -594,13 +594,13 @@ void main(void)
             LCD_Fourth_Line();  // Setting the cursor in the first line on the
                                 // fourth row of the LCD;
             
-            putsUSART("                   ");   // Seding information to the LCD
+            putsUSART("                   ");   // Sending information to the LCD
                                                 // through serial communication;
             
-            LCD_Third_Line();   // Setting the cursos in the first column of the
+            LCD_Third_Line();   // Setting the cursor in the first column of the
                                 // third row on the LCD;
             
-            putsUSART("     PERFECT              ");    // Seding information to
+            putsUSART("     PERFECT              ");    // Sending information to
                                                         // the LCD through
                                                         // serial communication;
             
@@ -627,13 +627,13 @@ void main(void)
             LCD_Fourth_Line();  // Setting the cursor in the first line on the
                                 // fourth row of the LCD;
             
-            putsUSART("                   ");   // Seding information to the LCD
+            putsUSART("                   ");   // Sending information to the LCD
                                                 // through serial communication;
             
-            LCD_Third_Line();   // Setting the cursos in the first column of the
+            LCD_Third_Line();   // Setting the cursor in the first column of the
                                 // third row on the LCD;
             
-            putsUSART("     INCORRECT      ");   // Seding information
+            putsUSART("     INCORRECT      ");   // Sending information
                                                             // to the LCD
                                                             // through serial
                                                             // communication;
