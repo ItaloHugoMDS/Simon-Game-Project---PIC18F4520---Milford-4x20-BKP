@@ -198,7 +198,7 @@ When the ".hex" file is select, click `OK` and it should go back to the componen
 
 ![Step 25](./images/step-25.png "Running project")  
 
-After the menu is closed, the ".hex" file is loaded into the chip and everything is ready to start. Click the play
+After the menu is closed, the ".hex" file is loaded into the chip and everything is ready to start. Click on the play
 button on the left bottom side of the screen and the game should start without any problems.  
 
 If you followed all the steps but still faced problems during the compilation or while running the project on Proteus,
