@@ -215,6 +215,6 @@ previously mentioned means.
 [link5]: https://www.microchip.com/en-us/tools-resources/archives/mplab-ecosystem#MCC2
 [link6]: https://ww1.microchip.com/downloads/Secure/en/DeviceDoc/peripheral-libraries-for-pic18-v2.00rc3-windows-installer.exe
 [link7]: https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc8
-[link8]: https://github.com/ItaloHugoMDS/Simon-Game-Project---PIC18F4520---Milford-4x20-BKP#Pre-installation
+[link8]: https://github.com/ItaloHugoMDS/Simon-Game-Project---PIC18F4520---Milford-4x20-BKP?tab=readme-ov-file#pre-installation
 [link9]: www.linkedin.com/in/italohugomds
 [link10]: silvaitalohugom@gmail.com
